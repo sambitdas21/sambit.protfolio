@@ -1,32 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-image: url("bb3.jpg");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    /* Style for the image gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
 
-        }
-    </style>
+    /* Style for the images within the gallery */
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center>
-        <nav class="md:ml-auto flex items-center justify-center text-base md:justify-start">
-           <ui>
-            <li><a class="mr-5 hover:text-gray-900" href="index.html">Home</a></li>
-            <li><a class="mr-5 hover:text-gray-900" href="about.html">About Us</a></li>
-            <li><a class="mr-5 hover:text-gray-900" href="my certifications.html">My Certifications</a></li>
-            <li><a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a></li>
-    </ui>
-    </div>
-    <div class = ".gallery">
-        <img src = "lpu1.jpg">
-        <img src = "lpu2.jpg">
-        <img src = "lpu3.jpg">
-        <img src = "lpu4.jpg">
-        <img src = "lpu5.jpg">
-        <img src = "lpu6.jpg">
-    </div>
+  <div class="gallery">
+    <img src="lpu1.jpg" alt="Image 1">
+    <img src="lpu2.jpg" alt="Image 2">
+    <img src="lpu3.jpg" alt="Image 3">
+    <!-- Add more <img> elements for additional images -->
+  </div>
 </body>
+</html>
+
+      
