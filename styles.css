@@ -84,14 +84,14 @@ img {
   margin-right: auto;
   width: 100%;
 }
-.img.gallery{
+img.gallery{
   width: 80%;
   margin: 100px auto 50px;
   display: grid;
   grid-template-coloumns: repeat(auto-fit, minmax(250px, lfr));
   grid-gap: 30px;
 }
-.img.gallery{
+img.gallery{
   width: 100%;
   cursor: pointer;
 }
