@@ -84,11 +84,3 @@ img {
   margin-right: auto;
   width: 100%;
 }
-.image-container {
-      display: flex;
-      gap: 20px; /* Adjust the spacing between images */
-    }
-    .image-container img {
-      width: 300px; /* Adjust image width */
-      height: 200px; /* Adjust image height */
-    }
