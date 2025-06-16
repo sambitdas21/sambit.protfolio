@@ -1,50 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>About Us </title>
+    <title>Blood Donation Organization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
+        }
+        header {
+            background: #c62828;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #e53935;
+        }
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background: #b71c1c;
+        }
+        section {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #b71c1c;
+        }
+    </style>
 </head>
-
 <body>
-    <div>
-        <ul>
-            <li><a href="contact.html">CONTACT US</a></li>
-            <li><a href="my certification.html">My Certifications</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="index.html">HOME</a></li>
-            <li><a herf="news.html">Gallery</a></li>
-            </ul>
+
+<header>
+    <h1>Welcome to LifeSaver Blood Donation</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#register">Donor Registration</a>
+    <a href="#apply">Apply for Blood</a>
+    <a href="#gallery">Gallery</a>
+    <a href="hospital_login.html">Hospital Login</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Join our mission to save lives through blood donation. Register as a donor or request blood when in need.</p>
+    <button onclick="sendUrgentAlert()" class="btn">Send Urgent Blood Requirement Alert</button>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are a non-profit organization committed to connecting blood donors with hospitals and individuals in need.</p>
+</section>
+
+<section id="register">
+    <h2>Donor Registration</h2>
+    <form id="donorForm">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
         </div>
+        <div class="form-group">
+            <label for="bloodType">Blood Type:</label>
+            <select id="bloodType" required>
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+    </form>
+</section>
 
-    <h1>ABOUT ME</h1>
-    <p> I'm thrilled to introduce myself as a passionate B.Tech Computer Science student at LOVELY PROFESSIONAL UNIVERSITY. My name is SAMBIT DAS, and I'm deeply fascinated by the world of technology and its ever-evolving landscape. As a computer science enthusiast,
-        I'm constantly exploring innovative solutions to real-world problems and seeking to push the boundaries of what's possible in the digital realm.Throughout my academic journey, I've delved into various aspects of computer science, from programming languages like
-        Java, Python, and C++ to data structures, algorithms, and software development methodologies. I've also developed a keen interest in fields such as artificial intelligence, machine learning, and cybersecurity, recognizing their profound impact on shaping the future.
-        Beyond the classroom, I actively engage in extracurricular activities and projects that allow me to apply my knowledge and skills in practical settings. Whether it's participating in hackathons, contributing to open-source projects, or pursuing personal coding projects,
-        I'm always eager to deepen my understanding and refine my abilities.In addition to technical proficiency, I value collaboration, communication, and problem-solving skills, which I believe are essential for success in the dynamic field of computer science. I'm enthusiastic
-        about connecting with fellow students, industry professionals, and researchers to exchange ideas, learn from diverse perspectives, and collectively drive innovation forward.Ultimately, my goal as a B.Tech Computer Science student is to leverage my education, experiences,
-        and passion to make meaningful contributions to the ever-expanding digital ecosystem, striving to create positive change and solve complex challenges through technology.I look forward to embarking on this exciting journey with all of you, and I'm eager to explore the endless
-        possibilities that lie ahead. Thank you for the opportunity to share a glimpse of my story with you! </p>
+<section id="apply">
+    <h2>Apply for Blood</h2>
+    <form id="bloodRequestForm">
+        <div class="form-group">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" required>
+        </div>
+        <div class="form-group">
+            <label for="bloodNeeded">Blood Type Needed:</label>
+            <select id="bloodNeeded" required>
+                <option value="">Select</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="O-">O-</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="payment">Payment Method:</label>
+            <select id="payment" required>
+                <option value="">Select</option>
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Submit Request</button>
+    </form>
+</section>
 
-    <h2>MY QUALIFICATIONS</h2>
-    <p>I have completed my high schooling from MODERN PUBLIC SCHOOL BALASORE by securing 70% in 2021, then I decided to complete my higher secondary schooling at KIIT INTERNATIONAL SCHOOL, BHUBNESWAREW, there i have secured 82% in 2023
-    I have also secured 72 percentile in JEE Mains. </p>
+<section id="gallery">
+    <h2>Gallery</h2>
+    <p>Photos of our recent blood donation camps and donor heroes.</p>
+    <!-- Add image gallery later -->
+</section>
 
-    <h2>MY GOALS</h2>
-    <p>
-        As a student in the dynamic field of computer science, my overarching goal is to absorb knowledge like a sponge and cultivate a comprehensive understanding of the core principles, methodologies, and emerging trends within the discipline. From mastering fundamental concepts like
-        data structures and algorithms to delving into specialized domains such as artificial intelligence, cybersecurity, and software engineering, I am committed to acquiring a well-rounded education that prepares me for the challenges and opportunities ahead.Beyond acquiring theoretical knowledge,
-        I am deeply invested in applying my skills in practical settings and real-world scenarios. Whether through hands-on projects, internships, or collaborative initiatives, I seek to bridge the gap between theory and practice, honing my problem-solving abilities and gaining invaluable experience
-        in tackling complex technical challenges.One of my primary objectives as a B.Tech Computer Science student is to foster a growth mindset and cultivate a lifelong passion for learning and innovation. I believe that the field of computer science is constantly evolving, and staying abreast of the
-        latest advancements and breakthroughs is essential for personal and professional growth. Through continuous self-improvement, I aim to not only adapt to change but also drive it, pushing the boundaries of what is possible and contributing to the advancement of technology.Moreover, I am deeply 
-        committed to making a positive impact on society through my knowledge and expertise in computer science. Whether it's developing software solutions to address social issues, promoting accessibility and inclusivity in technology, or advocating for ethical and responsible use of artificial intelligence,
-        I aspire to leverage my skills for the betterment of humanity.In essence, my goal as a B.Tech Computer Science student is not merely to earn a degree but to embark on a transformative journey of self-discovery, innovation, and service. I am excited about the endless possibilities that lie ahead and am 
-        eager to collaborate with fellow students, mentors, and industry professionals in pursuit of excellence and positive change.Thank you for allowing me to share my aspirations with you, and I look forward to embarking on this exciting journey together!
-    </p>
+<script>
+    document.getElementById("donorForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Donor registered successfully!");
+    });
+
+    document.getElementById("bloodRequestForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Blood request submitted successfully!");
+    });
+
+    function sendUrgentAlert() {
+        alert("Urgent blood requirement alert has been sent to registered donors!");
+    }
+</script>
 
 </body>
-
 </html>
